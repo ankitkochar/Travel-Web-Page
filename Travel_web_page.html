@@ -1,0 +1,991 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+  <title>Travel-Page</title>
+  <style>
+    html, body{scroll-behavior: smooth; overflow-x: hidden;
+    }
+    a.z{
+      color: gray;
+    }
+    .crousal_heading{
+      font-size: 320%;
+    }
+    .crousal_text{
+      font-size: 125%;
+    }
+    .crousal_btn{
+      background-color: orangered;
+    }
+    .crousal_btn:hover{
+      background-color: rgb(255, 101, 53);
+    }
+    .crousal_btn:active{
+      background-color: orangered !important;
+      border: none !important;
+      color: white !important;
+    }
+    .tab_nav{
+      background-color: rgba(0,0,0,0);
+      margin-top: -3em;
+    }
+  .n1{
+    background-color: white;
+  }
+  .form1{
+    height: 13vh;
+  }
+  .imaze{
+    height: 30vh;
+  }
+  .three_card{
+    height: 85vh;
+  }
+  .z{
+    color: grey !important;
+  }
+  .z.active{
+    color: orangered !important;
+    background-color: #f8f9fa!important;
+    border-color: #f8f9fa!important;
+  }
+  .tp{
+    color: rgb(90 90 90);
+    font-size: 88%;
+  }
+  .title_c{
+    margin-top: 5rem;
+  }
+  .orange_d{
+    color: orangered;
+    font-size: 80%;
+    font-weight: 500;
+    margin-top: -7px;
+  }
+  .boldness_1{
+    font-size: 130%;
+    font-weight: bold;
+  }
+  .g1{
+    font-size: 90%;
+    color: rgb(83, 74, 74);
+  }
+  .tc{
+    background:  linear-gradient(rgba(50, 27, 27,0.4),rgba(50, 27, 27,0.4)), url("https://images.unsplash.com/photo-1477288309209-a14ce05a641e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80") no-repeat center center;
+    background-size: cover;
+    height: 70vh;
+  }
+  .hsq{
+    color: dodgerblue;
+    font-size: 650%;
+  }
+  .ab{
+    font-size: 88%;
+  }
+  .bn-x{
+    border-color: orangered;
+    color: orangered;
+  }
+  .bn-x:hover{
+    background-color: orangered;
+    color: white;
+  }
+  .zig-zag-image{
+    height: 40vh;
+  }
+  .j-card{
+    border: none;
+  }
+  .j-p{
+    font-size: 80%;
+    color: #545b62;
+  }
+  .ji{
+    font-size: 180%;
+    color: dodgerblue;
+  }
+  .man{
+    height: auto;
+  }
+  .cr-01{
+    background: linear-gradient(rgba(35, 27, 27,0.4),rgba(35, 27, 27,0.4)) , url("https://images.unsplash.com/photo-1519046798162-b7144ecf8f38?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1950&q=80") no-repeat center center;
+    background-size: cover;
+    height: 75vh;
+  }
+  .cbt{
+    font-size: 127%;
+  }
+  .im{
+    color: rgb(90, 90, 90);
+  }
+  .cbtt{
+    font-size: 120%;
+  }
+  .dot{
+    z-index: 1;
+    position: relative;
+    height: 135px;
+    width: 135px;
+    border-radius: 135px;
+    background: url("https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=135&q=40&h=135") no-repeat center center;
+    margin-top: -4rem;
+    margin-left: 31rem;
+  }
+  .company_name{
+    font-size: 290%;
+    color: rgb(170, 170, 170);
+  }
+  .x{
+    color: rgb(80,80,80);
+  }
+  .x>span{
+    font-size: 80%;
+    font-weight: 1000;
+  }
+  .ts{
+    color: rgb(88,88,88);
+    font-size: 85%;
+  }
+  .qp{
+    font-size: 96%;
+  }
+  .qaz{
+    font-size: 70%;
+    color: dodgerblue;
+  }
+  .like{
+    color: rgb(80,100,100);
+    font-size: 80%;
+    font-weight: 600;
+  }
+  .iconz{
+    color: rgba(120,140,140,0.3);
+  }
+  .ak47{
+    font-size: 50% !important;
+  }
+  .op{
+    font-size: 78%;
+  }
+  .form_vali{
+    background: linear-gradient(rgba(10,20,40,0.4),rgba(10,20,40,0.4)),url("https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1952&q=80")
+    no-repeat center center;
+    background-size: cover;
+    height: 90vh;
+  }
+  .nm::placeholder{
+    font-size: 80%;
+    font-weight: 500;
+    padding: 8px;
+  }
+  .nm{
+    border: none;
+  }
+  .kr{
+    height: 18vh;
+  }
+  .bn{
+    position: relative;
+    margin-bottom: -1rem;
+  }
+  .imj{
+    height: 20vh;
+    width: 15vw;
+    background: url("https://images.unsplash.com/photo-1496046596374-a16aa8b8ae63?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=400&q=80&h=300") no-repeat center center ;
+    background-size: cover;
+  }
+  .zxc{
+    background-color: rgba(0,0,0,0.9);
+    color: white !important; 
+  }
+  .asdf{
+    font-size: 78%;
+    padding-left: 0px;
+    margin-left: 0px;
+  }
+  .dfg{
+    width: 15vw;
+  }
+  .bnmv{
+    background-color: rgba(30,30,30,0.9);
+    border: 1px solid rgba(150, 150, 150, 0.6);
+    font-size: 70%;
+    margin: 3px;
+    border-radius: 3px;
+    padding: 2px;
+    padding-inline: 8px;
+  }
+  .bnmv:hover{
+    cursor: pointer;
+    background-color: rgba(150, 150, 150, 0.6);
+    border: 1px solid rgba(30,30,30,0.9);
+  }
+  .imj>div{
+    width: 5vw;
+    height: 20vh;
+    border-left: 5px solid rgba(30,30,30,0.9);
+    border-right: 5px solid rgba(30,30,30,0.9);
+  }
+  hr{
+    background-color: rgba(30,30,30,0.9);
+    height: 5px;
+    width: 100%;
+  }
+  .bl{
+    background-color: black;
+    color: white;
+    font-size: 65%;
+  }
+  .asw{
+    color: white; mx-2
+  }
+  </style>
+
+</head>
+
+<body>
+  <!-- head -->
+
+  <header class=" page-header text-white d-flex align-items-center" style="background-color: black; font-size: 64%;">
+    <div class=" col-3 d-flex justify-content-end header_content">
+      Let's the journey begin!
+    </div>
+    <div class="col-9 d-flex align-items-center">
+      <div class="header_content d-flex">
+        <a href="#"><i class="fab fa-facebook-f px-2 text-white"></i></a>
+        <a href="#"><i class="fab fa-instagram px-2 text-white"></i></a>
+        <a href="#"><i class="fab fa-twitter px-2 text-white"></i></a>
+        <a href="#"><i class="fab fa-pinterest-p px-2 text-white"></i></a>
+      </div>
+      <div class="container d-flex offset-lg-5">
+        <div class="dropdown small">
+          <button type="button" class="btn btn-xs dropdown-toggle text-white m-0" data-toggle="dropdown"
+            style="background-color: black;">
+            <span style="font-size: 64%;">EN</span>
+          </button>
+          <div class="dropdown-menu text-white ">
+            <a class="dropdown-item" href="#">fr-CA</a>
+            <a class="dropdown-item" href="#">mas</a>
+            <a class="dropdown-item" href="#">i-klingon </a>
+          </div>
+        </div>
+        <div class="dropdown small">
+          <button type="button" class="btn dropdown-toggle btn-xs text-white " data-toggle="dropdown"
+            style="background-color: black;">
+            <span style="font-size: 64%;" class="mt-0">USD</span>
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#a1">CAD</a>
+            <a class="dropdown-item" href="#">EUR</a>
+            <a class="dropdown-item" href="#">NZD</a>
+          </div>
+        </div>
+        <button type="button" class="btn btn-xs" style="background-color: black">
+          <span class=" d-flex align-items-center text-white" style="font-size: 64%;">
+            <i class="fas fa-user-circle fa-lg"></i>
+            <p class="p-0 m-0 px-2">My Account</p>
+          </span>
+        </button>
+      </div>
+  </header>
+
+  <!-- nav  -->
+
+  <nav class="navbar navbar-expand-sm navbar-light">
+    <div class="container">
+      <ul class="navbar-nav ml-5">
+        <li class="nav-item">
+          <a class="nav-link d-flex" href="#">
+            <h6 class="text-dark font-weight-bold mt-1">TRAVEL</h6>
+            <i class="fas fa-circle circle mt-1 px-1" style="color:orangered; font-size: 146%;"></i>
+            <h5 class="text-dark">pus</h5>
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav row col-9 justify-content-center" style="font-size: 75%; font-weight: 700;">
+        <li class="nav-item">
+          <a class="nav-link px-3" href="#" style="color:orangered">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3" href="#">PAGES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3" href="#">HOTELS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3" href="#">FLIGHTS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3" href="#">TOURS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3" href="#">BLOG</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3" href="#">CONTACT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link c" href="#">
+            <i class="fas fa-search"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- First Crousal  -->
+
+  <div class="row align-items-center justify-content-center" style="height:90vh; background:linear-gradient(rgba(3, 3, 10, 0.6),rgba(3, 3, 10, 0.6)), url(https://images.unsplash.com/photo-1590001155093-a3c66ab0c3ff?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTV8fGhvdGVsc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60) no-repeat center center; background-size: cover;">
+    <div id="carouselExampleIndicators" class="carousel slide text-white pinka w-100"  data-ride="carousel" >
+      <div class="carousel-inner">
+        <div class="carousel-item active text-center">
+          <div class="container w-50">
+            <div class="pb-4 my-0 " style="color: yellow; font-size: 120%;">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h1 class="crousal_heading pb-2">ORIENTAL COTTAGE RESORT</h1>
+            <p class="crousal_text">Welcome to BEST WESTERN The Sea Hotel in South Shields. Located on the sea front, within a short walking
+              distance of the town centre</p>
+              <button type="button" class="btn btn-danger crousal_btn px-4 py-1 mt-4">View Detail</button>
+            </div>
+        </div>
+        <div class="carousel-item text-center">
+          <div class="container w-50">
+            <div class="pb-4 my-0" style="color: yellow; font-size: 120%;">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h1 class="crousal_heading pb-2">ORIENTAL COTTAGE RESORT</h1>
+            <p class="crousal_text">Welcome to BEST WESTERN The Sea Hotel in South Shields. Located on the sea front, within a short walking
+              distance of the town centre</p>
+            <button type="button" class="btn btn-danger crousal_btn px-4 py-1 mt-4">View Detail</button>
+          </div>
+        </div>
+        <div class="carousel-item text-center">
+          <div class="container w-50">
+            <div class="pb-4 my-0" style="color: yellow; font-size: 120%;">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h1 class="crousal_heading pb-2">ORIENTAL COTTAGE RESORT</h1>
+            <p class="crousal_text">Welcome to BEST WESTERN The Sea Hotel in South Shields. Located on the sea front, within a short walking
+              distance of the town centre</p>
+            <button type="button" class="btn btn-danger crousal_btn px-4 py-1 mt-4">View Detail</button>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+<!-- First Form  -->
+
+<nav>
+  <div class="nav nav-tabs tab_nav offset-lg-2 font-weight-bold" id="nav-tab" role="tablist">
+    <a class="nav-item nav-link active n1 mr-1 px-4 z" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">HOTEL</a>
+    <a class="nav-item nav-link n1 mr-1 px-4 z" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false" style="color: grey;">FLIGHT</a>
+    <a class="nav-item nav-link n1 mr-1 px-4 z" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">TOUR</a>
+  </div>
+</nav>
+<div class="tab-content  bg-light text-dark" id="nav-tabContent"> 
+  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+    <div class="container-fluid form1 d-flex align-items-center  offset-lg-1">
+      <div class="container d-flex m-0">
+        <input class="form-control col-3 mx-3" type="text" placeholder="Enter a destination">
+        <input class="form-control col-3 mx-3" type="text" placeholder="Enter hotel name">
+        <input class="form-control col-2 mx-3" type="date" placeholder="Check in">
+        <input class="form-control col-2 mx-3" type="date" placeholder="Check out">
+        <button type="button" class="form-control btn btn-outline-warning col-1 p-0 bn-x">Search</button>
+      </div>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+    <div class="container-fluid bg-light text-dark form1 d-flex align-items-center ml-5">
+      <div class="container-fluid d-flex m-0 ml-5">
+        <input class="form-control col-3 inform1 mx-3" type="text" placeholder="Enter source station">
+        <input class="form-control col-3 inform1 mx-3" type="text" placeholder="Enter destination station">
+        <input class="form-control col-2 inform1 mx-3" type="date" placeholder="Enter a date">
+        <button type="button" class="form-control btn btn-outline-warning col-1 inform1 bn-x">Search</button>
+      </div>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+    
+    <div class="container-fluid bg-light text-dark form1 d-flex align-items-center ml-5">
+      <div class="container-fluid d-flex m-0 ml-5">
+        <input class="form-control col-3 inform1 mx-3" type="text" placeholder="Enter a destination">
+        <input class="form-control col-3 inform1 mx-3" type="text" placeholder="Number of days">
+        <input class="form-control col-2 inform1 mx-3" type="date" placeholder="Enter Starting date">
+        <button type="button" class="form-control btn btn-outline-warning col-1 inform1 bn-x">Search</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- First Three Cards  -->
+
+  <!-- <div class="card-deck">
+    <div class="card">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="container-fluid three_card">
+    <h2 class="font-weight-bold text-center mb-0 title_c">FEATURED TOURS</h2>
+    <p class="text-center light-grey tp mt-0 mb-5">Our tours encourage you to experience architecture</p>
+    <div class="container d-flex">
+      <div class="card col-4 c1 p-0 mr-4 cards_">
+        <img class="card-img-top imaze"
+          src="https://images.unsplash.com/photo-1542397284385-6010376c5337?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60&h=800"
+          alt="Card image cap" id="t1">
+        <div class="card-body bg-light">
+          <h5 class="card-title font-weight-bold pt-2">DENGIE PENINSULA</h5>
+          <div class="d-flex justify-content-between orange_d align-items-end">
+            <div class="">
+              From
+              <span class="boldness_1 ">
+                $2100
+              </span>
+            </div>
+            <div class=" ">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+          <p class="card-text mt-3" style="font-size: 84%;">Sample the delights of the world-famous spa town of KARlovy Vary on this full-day trip from Prague, including a delicious lunch...</p>
+          <a href="#" class=" font-weight-bold g1">VIEW DETAILS <i class='fas fa-arrow-right'></i></a>
+        </div>
+      </div>
+      <div class="card col-4 c1 p-0 mr-4 cards_">
+        <img class="card-img-top imaze"
+          src="https://images.unsplash.com/photo-1574244104030-7ebb728e683c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjZ8fG9jZWFuJTIwd2l0aCUyMHR1cnRsZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60&h=800"
+          alt="Card image cap" id="t2">
+        <div class="card-body bg-light">
+          <h5 class="card-title font-weight-bold pt-2">EASTER ROSS</h5>
+          <div class="d-flex justify-content-between orange_d align-items-end">
+            <div class="">
+              From
+              <span class="boldness_1 ">
+                $1700
+              </span>
+            </div>
+            <div class=" ">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+          <p class="card-text lv mt-3" style="font-size: 84%;">Sample the delights of the world-famous spa town of KARlovy Vary on this full-day trip from Prague, including a delicious lunch...</p>
+          <a href="#" class=" font-weight-bold g1">VIEW DETAILS <i class='fas fa-arrow-right'></i></a>
+        </div>
+      </div>
+      <div class="card col-4 c1 p-0 mr-4 cards_">
+        <img class="card-img-top imaze"
+          src="https://images.unsplash.com/photo-1542429296407-20c78e10f375?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fHJlc29ydCUyQyUyMGhvdGVscyUyQyUyMGJlYWNoJTJDJTIwY3J1aXNlfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60&h=800"
+          alt="Card image cap" id="t3">
+        <div class="card-body bg-light">
+          <h5 class="card-title font-weight-bold pt-2">THE WIRRAL</h5>
+          <div class="d-flex justify-content-between orange_d align-items-end">
+            <div class="">
+              From
+              <span class="boldness_1 ">
+                $3400
+              </span>
+            </div>
+            <div class=" ">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+          <p class="card-text light_g mt-3" style="font-size: 84%;">Sample the delights of the world-famous spa town of KARlovy Vary on this full-day trip from Prague, including a delicious lunch...</p>
+          <a href="#" class=" font-weight-bold g1">VIEW DETAILS <i class='fas fa-arrow-right'></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div> -->
+ 
+  <!-- Three cards ek sath vala crousal  -->
+  
+<div class="tc pt-5">
+  <h3 class=" text-white text-center pt-5">POPULAR DESTINATIONS</h3>
+  <p class="tp text-white text-center mb-5">All you need is the plan, the roasd map, and the courage to press on to your destination</p>
+  <div id="carouselExampleControl2" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class=" row justify-content-center">
+          <div class="card mr-4" style="width: 18rem;">
+            <div class="card-body text-center">
+              <i class="fas fa-church hsq"></i>
+              <h6 class="card-title font-weight-bold ab pt-3">EMPIRE STATE BUILDING</h6>
+            </div>
+          </div>
+          <div class="card mr-4" style="width: 18rem;">
+            <div class="card-body text-center">
+              <i class="far fa-hospital hsq"></i>
+              <h6 class="card-title font-weight-bold ab pt-3">CAPITOL</h6>
+            </div>
+          </div>
+          <div class="card mr-4" style="width: 18rem;">
+            <div class="card-body text-center">
+              <i class="fas fa-hotel hsq"></i>
+              <h6 class="card-title font-weight-bold ab pt-3">NOTRE DAME</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class=" row justify-content-center">
+          <div class="card mr-4" style="width: 18rem;">
+            <div class="card-body text-center">
+              <i class="fas fa-church hsq"></i>
+              <h6 class="card-title font-weight-bold ab pt-3">EMPIRE STATE BUILDING</h6>
+            </div>
+          </div>
+          <div class="card mr-4" style="width: 18rem;">
+            <div class="card-body text-center">
+              <i class="far fa-hospital hsq"></i>
+              <h6 class="card-title font-weight-bold ab pt-3">CAPITOL</h6>
+            </div>
+          </div>
+          <div class="card mr-4" style="width: 18rem;">
+            <div class="card-body text-center">
+              <i class="fas fa-hotel hsq"></i>
+              <h6 class="card-title font-weight-bold ab pt-3">NOTRE DAME</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControl2" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControl2" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+  <!-- Zig-Zag Cards  -->
+<!-- <div>
+  <div class="card" style="">
+    <div class="row">
+      <div class="col-md-5">
+        <img class="zig-zag-image"
+          src="https://images.unsplash.com/photo-1536869338989-e7ffd2297454?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80&h=800"
+          alt="...">
+      </div>
+      <div class="col-md-5">
+        <div class="card-body">
+          <h3 class="card-title">ABOUT US</h3>
+          <h6>We're all connected by love for travel!</h6>
+          <p class="card-text">The Travel Opus refers to a term used for explorers. Before trains and cars and phones, explorers were charged with well exploring. The only way of recording thier findings was to write, draw, or mimic lands they came across...</p>
+          <button type="button" class="form-control btn btn-outline-warning col-1 p-0 bn-x">Search</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="card mb-3" style="">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+            content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <img class="zig-zag-image"
+          src="https://images.unsplash.com/photo-1523444967761-8f47d458269e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80&h=800"
+          alt="...">
+      </div>
+    </div>
+  </div> -->
+<!-- <div class="container">
+  <div class="card row" style="width: 18rem;">
+      <img class="card-img-top" src="https://images.unsplash.com/photo-1536869338989-e7ffd2297454?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80&h=800" alt="Card image cap">
+    </div>
+    <div class="card-body col-md-6">
+      <h5 class="card-title">ABOUT US</h5>
+      <p class="card-text">The Travel Opus refers to a term used for explorers. Before trains and cars and phones, explorers were charged with well exploring. The only way of recording thier findings was to write, draw, or mimic lands they came across...</p>
+      <a href="#" class="btn btn-outline-warning bn-x">Go somewhere</a>
+    </div>
+  </div>
+</div> -->
+
+<!-- text with man with happy face -->
+
+<div class="container-fluid bg-light row">
+  <div class="container py-5 col-md-6 offset-lg-2 mr-0" style="width: 43vw;">
+    <h3 class="font-weight-bold py-4" style="font-size: 193%;">WHY BOOK WITH US?</h3>
+    <p class="j-p mb-4 pb-2">The only way reording thier findings was to write, draw, or mimic lands, animals and folks they came across. We believe in this "good enough" philosophy with reagrds to my photos.</p>
+    <div class=" row">
+      <div class="card col-md-6 bg-light j-card">
+        <div class=" row">
+          <div class="col-2 pt-1">
+          <i class="fas fa-globe ji"></i>
+          </div>
+          <div class="col-10 pr-0">
+            <h6 class="font-weight-bold">Secure Online Transaction</h6>
+            <p class="j-p">
+              Security and privacy of your transaction are protectedby RapidSSL authorized
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card col-md-6 bg-light j-card">
+        <div class="row align-items-start">
+          <div class="col-2 pt-1">
+          <i class="fas fa-search ji"></i>
+          </div>
+          <div class="col-10 pr-0">
+            <h6 class="font-weight-bold">Most Expensive Search Results</h6>
+            <p class="j-p">
+              Comparing cheap flights and hotels has never been this easy
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card col-md-6 bg-light j-card">
+        <div class=" row">
+          <div class="col-2 pt-1">
+          <i class="fas fa-book ji"></i>
+          </div>
+          <div class="col-10 pr-0">
+            <h6 class="font-weight-bold">Manage Your Bookings Online</h6>
+            <p class="j-p">
+              Log in to access your e-ticket/hotel voucher on all your devices, retrieve booking
+            </p>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card col-md-6 bg-light j-card">
+        <div class=" row">
+          <div class="col-2 pt-1">
+          <i class="fas fa-user ji"></i>
+          </div>
+          <div class="col-10 pr-0">
+            <h6 class="font-weight-bold">Customer Service</h6>
+            <p class="j-p">
+              Need help? Contact us any time via email, phone or live chat
+            </p>
+          </div>
+        </div>
+      </div>      
+    </div>
+  </div>
+  <div class=" col-md-3 p-0 m-0 bg-light">
+    <img class="man bg-light" src="pictures/man_without_bg.png" alt="">
+  </div>
+</div>
+
+  <!-- Crousel3 -->
+<div class="cr-01 py-5">
+  <div class="container">
+    <h3 class="text-white font-weight-bold text-center pt-4 mb-1">TESTIMONIALS</h3>
+    <p class="text-white text-center mt-0 mb-5" style="font-size: 92%;">What our clients say about us and our services. Our happy moment together!</p>
+    <div id="carouselExampleControl1" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row justify-content-center">
+            <div class="card im bg-light" style="width: 48rem;">
+              <div class="card-body col-md-11 mx-5 pb-5">
+                <p class="card-text cbt">There comes a moment on journey when something irresistible and charming as wine raised to thirsty lips, wells up in the traveller's being
+                </p>
+                <h5 class="card-title cbtt text-center pb-5">- Patrick MacGill -</h5>
+              </div>
+            </div>
+          </div>
+          <div class="dot">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="card im bg-light" style="width: 48rem;">
+              <div class="card-body col-md-11 mx-5 pb-5">
+                <p class="card-text cbt">There comes a moment on journey when something irresistible and charming as wine raised to thirsty lips, wells up in the traveller's being
+                </p>
+                <h5 class="card-title cbtt text-center pb-5">- Patrick MacGill -</h5>
+              </div>
+            </div>
+          </div>
+          <div class="dot">
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControl1" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControl1" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+</div>
+  <!-- companies name -->
+
+  <div class="jumbotron jumbotron-fluid">
+    <div class="row text-dark px-4">
+
+      <h1 class="col-xl-2 col-lg-4 col-6 font-weight-bold company_name">INDIGO</h1>
+      <h1 class="col-xl-2 col-lg-4 col-6 font-weight-bold company_name">django</h1>
+      <h1 class="col-xl-2 col-lg-4 col-6 font-weight-bold company_name">acando</h1>
+      <h1 class="col-xl-2 col-lg-4 col-6 font-weight-bold company_name"><i class="fas fa-map-marker-alt mr-2"></i>
+        <span>OYO</span>
+      </h1>
+      <h1 class="col-xl-2 col-lg-4 col-6 font-weight-bold company_name">lessymore</h1>
+      <h1 class="col-xl-2 col-lg-4 col-6 font-weight-bold company_name">Clarity</h1>
+    </div>
+  </div>
+
+  <!-- three card like and comment vale  -->
+
+<div class="container py-5">
+  <h3 class="font-weight-bold text-center" style="font-size: 193%;">LATEST NEWS</h3>
+  <p class="text-center ts mb-5">Travellers have shown the feat is possible with lot of planning and ingenuity</p>
+  <div class="card-deck my-5">
+    <div class="card">
+      <img class="card-img-top"
+        src="https://images.unsplash.com/photo-1501704289633-0a10f8f177af?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60&h=300"
+        alt="Card image cap">
+      <div class="card-body bg-light">
+        <h6 class="card-title font-weight-bold qp m-1">How To Pack Like A Travel Pro</h6>
+        <p class="p-0 m-0 qaz px-1">04/11/2020 - by Gustave Flaubert</p>
+        <div class="row py-2 px-1">
+          <div class="col-6 like">
+            <i class="fas fa-heart iconz"></i>
+            <span>98 Likes</span>
+          </div>
+          <div class="col-6 like">
+            <i class="fas fa-comment iconz"></i>
+            <span>31 Comments</span>
+          </div>
+        </div>
+        <p class="card-text ak-47 px-1" style="font-size: 80%;">
+          Overpicking is easy to do, and packing smarter is definetly a learned skill. When Paste asked its expert travel writers for tips...
+        </p>
+        <button type="button" class="btn btn-outline-warning bn-x op  mx-1">Read More</button>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top"
+        src="https://images.unsplash.com/photo-1546786946-1deaff2f2b36?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTYzfHxmYW1pbHklMjBvbiUyMGJlYWNofGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60&h=300"
+        alt="Card image cap">
+      <div class="card-body bg-light">
+        <h6 class="card-title font-weight-bold qp m-1">Why Cheaper Isn't Always Better</h6>
+        <p class="p-0 m-0 qaz px-1">04/11/2020 - by Gustave Flaubert</p>
+        <div class="row py-2 px-1">
+          <div class="col-6 like">
+            <i class="fas fa-heart iconz"></i>
+            <span>98 Likes</span>
+          </div>
+          <div class="col-6 like">
+            <i class="fas fa-comment iconz"></i>
+            <span>31 Comments</span>
+          </div>
+        </div>
+        <p class="card-text ak-47 px-1" style="font-size: 80%;">
+          Overpicking is easy to do, and packing smarter is definetly a learned skill. When Paste asked its expert travel writers for tips...
+        </p>
+        <button type="button" class="btn btn-outline-warning bn-x op mx-1">Read More</button>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top"
+        src="https://images.unsplash.com/photo-1464081277020-421d61b8607b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTZ8fGNvdXBsZSUyMG9uJTIwYmVhY2h8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60&h=300"
+        alt="Card image cap">
+        <div class="card-body bg-light">
+          <h6 class="card-title font-weight-bold qp m-1">The Best Quay To Pick A Trip</h6>
+          <p class="p-0 m-0 qaz px-1">04/11/2020 - by Gustave Flaubert</p>
+          <div class="row py-2 px-1">
+            <div class="col-6 like">
+              <i class="fas fa-heart iconz"></i>
+              <span>98 Likes</span>
+            </div>
+            <div class="col-6 like">
+              <i class="fas fa-comment iconz"></i>
+              <span>31 Comments</span>
+            </div>
+          </div>
+          <p class="card-text ak-47 px-1" style="font-size: 80%;">
+            Overpicking is easy to do, and packing smarter is definetly a learned skill. When Paste asked its expert travel writers for tips...
+          </p>
+          <button type="button" class="btn btn-outline-warning bn-x op mx-1 mb-2">Read More</button>
+        </div>
+    </div>
+  </div>
+</div>
+
+  <!-- feedback or connecting form  -->
+
+<div class="form_vali py-5">
+  <div class="container my-5">
+    <h3 class="text-center text-white mb-5">LET THE JOURNEY BEGIN</h3>
+    <form class="needs-validation bg-light" style="width: 55vw; margin-inline: auto; border-radius: 4px;" novalidate>
+    <div class="form-row mnb justify-content-center pt-4">
+        <div class="col-md-5 py-1">
+          <input type="text" class="form-control nm mr-5 my-2" id="validationTooltip01" placeholder="Name" value="" required>
+        </div>
+        <div class="col-md-5 py-1">
+          <input type="text" class="form-control nm mr-5 my-2" id="validationTooltip02" placeholder="Phone Number" value="" required>
+        </div>
+        <div class="col-md-5 py-1">
+          <input type="text" class="form-control nm mr-5 my-2" id="validationTooltip02" placeholder="Email" value="" required>
+        </div>
+        <div class="col-md-5 py-1">
+          <input type="text" class="form-control nm mr-5 my-2" id="validationTooltip02" placeholder="Title" value="" required>
+        </div>
+        <div class="col-md-10 py-1 mb-4">
+          <input type="text" class="form-control nm mr-5 my-2 kr cd" id="validationTooltip02" placeholder="Messages" value="" required>
+        </div>
+        <div class="col-md-10 bn row justify-content-center">
+          <button type="button" class="btn btn-danger crousal_btn px-4 py-1 m-0 p-0" style="font-weight: 600;">Call Me back</button>
+        </div>
+        </div>
+    </form>
+  </div>
+</div>
+
+<!-- second-last  -->
+
+<div class="zxc row justify-content-center py-5">
+  <div class="container row my-5">
+    <div class="col-3">
+      <h5 class="row align-items-center pl-3">TRAVEL<i class="fas fa-circle circle mt-1 px-1" style="color:orangered; font-size: 146%;"></i><span style="font-size: 120%; margin-top: -8px;">pus</span></h5>
+      <div class="dfg">
+        <p class="asdf pt-4">Taking the guesswork out of planning your vacation is our job. we serve your international travel needs with highly trained advisors who will assist you at every direction of your vacation planning. And we are ready to go with you!</p>
+        <a href="#" class="pr-3 text-white"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="pr-3 text-white"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="pr-3 text-white"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="pr-3 text-white"><i class="fab fa-pinterest-p"></i></a>
+      </div>
+    </div>
+    <div class="col-3">
+      <h5>CONTACT INFO</h5>
+      <div class="dfg pt-4">
+        <p class="asdf py-2"><i class="fas fa-map-marker-alt mr-2"></i>7226 Belmont Harbor Access Place, Broussard, LA</p>
+        <p class="asdf py-2"><i class="fas fa-phone mr-2"></i>(+93) 1-555-555</p>
+        <p class="asdf py-2"><i class="fas fa-envelope mr-2"></i>info@eplus.com</p>
+      </div>
+    </div>
+    <div class="col-3">
+      <h5>TAGS</h5>
+      <div class="row mt-4 pt-3">
+        <button type="button" class="bnmv text-white">sale</button>
+        <button type="button" class="bnmv text-white">hotel</button>
+        <button type="button" class="bnmv text-white">flight</button>
+        <button type="button" class="bnmv text-white">hot</button>
+        <button type="button" class="bnmv text-white">tour</button>
+        <button type="button" class="bnmv text-white">booking</button>
+        <button type="button" class="bnmv text-white">lasted</button>
+        <button type="button" class="bnmv text-white">tip</button>
+        <button type="button" class="bnmv text-white">new</button>
+        <button type="button" class="bnmv text-white">ticket</button>
+        <button type="button" class="bnmv text-white">beach</button>
+        <button type="button" class="bnmv text-white">planning</button>
+        <button type="button" class="bnmv text-white">offer</button>
+        <button type="button" class="bnmv text-white">room</button>
+        <button type="button" class="bnmv text-white">featured</button>
+      </div>
+    </div>
+    <div class="col-3">
+      <h5>INSTAGRAM</h5>
+      <div class="dfg mt-3 pt-1">
+        <div class="imj my-4 row justify-content-center align-items-center">
+          <hr>
+          <div class="row align-items-center" style="position: absolute;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- license and last  -->
+
+<div class="bl py-3 row">
+  <div class="col-5 text-center mx-4"><i class="far fa-copyright"></i>Copyright 2016 by Eplus Themes. All right serviced.</div>
+  <div class="col-5 text-center offset-lg-1">
+    <a href="#" class="asw mx-2">Privacy Policy</a>
+    <a href="#" class="asw mx-2" style="color: orange;">About Us</a>
+    <a href="#" class="asw mx-2">Support</a>
+    <a href="#" class="asw mx-2">FAQ</a>
+    <a href="#" class="asw mx-2">Blog</a>
+  </div>
+</div>
+</body>
+
+</html>
